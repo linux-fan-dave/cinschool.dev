@@ -1,0 +1,45 @@
+version: "3"
+
+services:
+
+  portal:
+    container_name: cinschool.portal
+    build:
+      context: ./client
+      args:
+        - PROJECT=portal
+    networks: [default]
+    ports: [7010:4200]
+    stop_signal: SIGKILL
+    volumes:
+      - ./client/:/app
+
+  admin:
+    container_name: cinschool.admin
+    build:
+      context: ./client
+      args:
+        - PROJECT=admin
+    networks: [default]
+    ports: [7011:4200]
+    stop_signal: SIGKILL
+    volumes:
+      - ./client/:/app
+
+  database:
+    container_name: cinschool.db
+    image: postgres:16-alpine
+    networks: [default]
+    ports: [7013:5432]
+    stop_signal: SIGKILL
+    restart: unless-stopped
+    volumes:
+      - cinschool-db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=cinschool
+      - POSTGRES_PASSWORD=cinschool
+      - POSTGRES_USER=cinschool
+
+volumes:
+  cinschool-db:
+    driver: local
