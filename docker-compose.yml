@@ -26,6 +26,16 @@ services:
     volumes:
       - ./client/:/app
 
+  server:
+    container_name: cinschool.server
+    build:
+      context: ./server
+    networks: [default]
+    ports: [7012:8080]
+    restart: unless-stopped
+    volumes:
+      - ./server/:/app
+
   database:
     container_name: cinschool.db
     image: postgres:16-alpine
