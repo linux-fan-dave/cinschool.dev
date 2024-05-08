@@ -55,6 +55,9 @@ After building and running the application following URLs are exposed:
 - Server: http://localhost:7012
 - Database: http://localhost:7013
 
+### GraphQL Banana Cake Pop
+For testing the API you can reach the playground here: http://localhost:7012/graphql/
+
 ## Specification and data model
 
 The folder `specs` contains the datamodel and is a [Modelio](https://github.com/ModelioOpenSource/Modelio) project. To open the project open Modelio and switch the workspace to `specs`. 
