@@ -46,7 +46,7 @@ docker compose up --scale server=0
 
 ## Server
 
-For the server we use a [.Net](https://github.com/Erikvdv/realworlddotnet) implementation of the [RealWorld](https://main--realworld-docs.netlify.app/) specification.   
+For the server we use a [.Net](https://github.com/Concept-in-Code/realworlddotnet) implementation of the [RealWorld](https://main--realworld-docs.netlify.app/) specification.   
 
 
 ## Tools and URLs

@@ -3,4 +3,4 @@
 	url = https://github.com/Concept-in-Code/cinschool.client
 [submodule "server"]
 	path = server
-	url = https://github.com/Erikvdv/realworlddotnet
+	url = https://github.com/Concept-in-Code/realworlddotnet
