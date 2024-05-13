@@ -34,8 +34,7 @@ services:
     ports: [7012:8080]
     restart: unless-stopped
     volumes:
-      - ./server/:/app
-
+      - ./server/:/src
   database:
     container_name: cinschool.db
     image: postgres:16-alpine

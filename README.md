@@ -2,8 +2,6 @@
 
 All services started from a single repository
 
-_Keep in mind this repository is for local development only and is not meant to be deployed on any production environment!_
-
 ## Requirements
 
 1. [Docker](https://docs.docker.com/install/)
@@ -46,6 +44,11 @@ In case of server development you should run the server within the IDE and not w
 docker compose up --scale server=0
 ```
 
+## Server
+
+For the server we use a [.Net](https://github.com/Erikvdv/realworlddotnet) implementation of the [RealWorld](https://main--realworld-docs.netlify.app/) specification.   
+
+
 ## Tools and URLs
 
 After building and running the application following URLs are exposed:
@@ -54,15 +57,6 @@ After building and running the application following URLs are exposed:
 - Admin (restricted area): http://localhost:7011
 - Server: http://localhost:7012
 - Database: http://localhost:7013
-
-### GraphQL Banana Cake Pop
-For testing the API you can reach the playground here: http://localhost:7012/graphql/
-
-## Specification and data model
-
-The folder `specs` contains the datamodel and is a [Modelio](https://github.com/ModelioOpenSource/Modelio) project. To open the project open Modelio and switch the workspace to `specs`. 
-
-in `specs/exports` are the exported diagrams as images.
 
 ## How to update the subprojects to the newest versions?
 
