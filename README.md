@@ -7,6 +7,17 @@ All services started from a single repository
 1. [Docker](https://docs.docker.com/install/)
 2. [Docker Compose](https://docs.docker.com/compose/install/)
 
+## Folders
+
+**slient**:
+Git submodule containing the client application
+
+**server**:
+Git submodule containing the server application
+
+**docs:**
+Exports of all session presentations
+
 ## How to run it?
 
 1. Clone the repository:
@@ -57,6 +68,12 @@ After building and running the application following URLs are exposed:
 - Admin (restricted area): http://localhost:7011
 - Server: http://localhost:7012
 - Database: http://localhost:7013
+
+### Swagger
+
+The Swagger Documentation can be found here:
+
+http://localhost:7012/swagger
 
 ## How to update the subprojects to the newest versions?
 

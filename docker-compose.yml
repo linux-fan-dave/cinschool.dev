@@ -35,19 +35,6 @@ services:
     restart: unless-stopped
     volumes:
       - ./server/:/src
-  database:
-    container_name: cinschool.db
-    image: postgres:16-alpine
-    networks: [default]
-    ports: [7013:5432]
-    stop_signal: SIGKILL
-    restart: unless-stopped
-    volumes:
-      - cinschool-db:/var/lib/postgresql/data
-    environment:
-      - POSTGRES_DB=cinschool
-      - POSTGRES_PASSWORD=cinschool
-      - POSTGRES_USER=cinschool
 
 volumes:
   cinschool-db:
