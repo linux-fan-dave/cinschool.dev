@@ -2,6 +2,19 @@ version: "3"
 
 services:
 
+  account:
+    container_name: cinschool.account
+    build:
+      context: ./client
+      args:
+        - PROJECT=account
+    networks: [default]
+    ports: [7010:4200]
+    restart: unless-stopped
+    stop_signal: SIGKILL
+    volumes:
+      - ./client/:/app
+
   portal:
     container_name: cinschool.portal
     build:
@@ -9,7 +22,8 @@ services:
       args:
         - PROJECT=portal
     networks: [default]
-    ports: [7010:4200]
+    ports: [7011:4200]
+    restart: unless-stopped
     stop_signal: SIGKILL
     volumes:
       - ./client/:/app
@@ -21,7 +35,8 @@ services:
       args:
         - PROJECT=admin
     networks: [default]
-    ports: [7011:4200]
+    ports: [7012:4200]
+    restart: unless-stopped
     stop_signal: SIGKILL
     volumes:
       - ./client/:/app
@@ -31,7 +46,7 @@ services:
     build:
       context: ./server
     networks: [default]
-    ports: [7012:8080]
+    ports: [7013:8080]
     restart: unless-stopped
     volumes:
       - ./server/:/src
