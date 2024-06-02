@@ -12,6 +12,7 @@ All services started from a single repository
   - [Windows Development](#windows-development)
     - [VPN \& Proxy support for WSL2](#vpn--proxy-support-for-wsl2)
     - [Specialities of Windows Development](#specialities-of-windows-development)
+    - [High memory consumption on windows](#high-memory-consumption-on-windows)
   - [Server](#server)
   - [Tools and URLs](#tools-and-urls)
     - [Swagger](#swagger)
@@ -108,6 +109,17 @@ The commands to start the docker environment must be executed from the WSL shell
 ```
 cd cinschool.dev
 docker compuse up
+```
+
+### High memory consumption on windows
+The WSL2 subsystem uses a ton of memory by default up to the point of nearly crashing your host. You might want to limit the amount of memory by configuring wsl in the following file: %UserProfile%\\.wslconfig. Such a file might look like this:
+
+```
+[wsl2]
+memory=4GB
+
+[experimental]
+autoMemoryReclaim = dropcache
 ```
 
 ## Server
