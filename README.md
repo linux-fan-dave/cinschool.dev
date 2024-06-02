@@ -133,14 +133,14 @@ After building and running the application following URLs are exposed:
 
 - Portal (public area): http://localhost:7010
 - Admin (restricted area): http://localhost:7011
-- Server: http://localhost:7012
+- Server: http://localhost:7013
 - Database: http://localhost:7013
 
 ### Swagger
 
 The Swagger Documentation can be found here:
 
-http://localhost:7012/swagger
+http://localhost:7013/swagger
 
 ## How to update the subprojects to the newest versions?
 
