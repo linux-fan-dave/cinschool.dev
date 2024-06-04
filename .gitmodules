@@ -1,6 +1,6 @@
 [submodule "client"]
 	path = client
-	url = https://github.com/Concept-in-Code/cinschool.client
+	url = ../cinschool.client
 [submodule "server"]
 	path = server
-	url = https://github.com/Concept-in-Code/realworlddotnet
+	url = ../realworlddotnet
