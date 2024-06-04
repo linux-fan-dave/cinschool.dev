@@ -26,14 +26,14 @@ All services started from a single repository
 
 ## Folders
 
-**slient**:
+**client**:
 Git submodule containing the client application
 
 **server**:
 Git submodule containing the server application
 
-**docs:**
-Exports of all session presentations
+**reverse-proxy:**
+Configs for the reverse proxy config
 
 ## How to run it?
 
@@ -134,13 +134,12 @@ After building and running the application following URLs are exposed:
 - Portal (public area): http://localhost:7010
 - Admin (restricted area): http://localhost:7011
 - Server: http://localhost:7013
-- Database: http://localhost:7013
 
 ### Swagger
 
 The Swagger Documentation can be found here:
 
-http://localhost:7013/swagger
+http://localhost:7013/api/swagger
 
 ## How to update the subprojects to the newest versions?
 
