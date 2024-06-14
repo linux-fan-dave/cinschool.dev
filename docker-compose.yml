@@ -50,6 +50,7 @@ services:
     restart: unless-stopped
     volumes:
       - ./server/:/src
+      - ./server/db/:/app/db
 
   frontend:
     container_name: cinschool.frontend
